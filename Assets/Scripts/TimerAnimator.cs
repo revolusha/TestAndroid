@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class TimerAnimator : MonoBehaviour
 {
+    [SerializeField] private float _delay = 1;
+
     private const string Trigger = "trigger";
-    private const float Delay= 2;
 
     private Animator _animator;
 
@@ -23,7 +24,7 @@ public class TimerAnimator : MonoBehaviour
 
     private IEnumerator WaitUntilAnimate()
     {
-        yield return new WaitForSeconds(Delay);
+        yield return new WaitForSeconds(_delay);
 
         _animator.SetTrigger(Trigger);
     }
