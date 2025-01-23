@@ -1,18 +1,25 @@
+using System;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
     [SerializeField] private Transform _player;
     [SerializeField] private float _sensitivity = 300;
-    [SerializeField] private int _raycastLayer = 7;
+    [SerializeField] private int _raycastItemLayerIndex = 7;
+    [SerializeField] private int _raycastCarLayerIndex = 8;
     [SerializeField] private float _raycastDistance = 2;
 
+    public static Action<GameObject> OnRaycastHitItem;
+    public static Action OnRaycastHitCar;
+
     private float _rotationX;
+    private int _raycastLayer;
 
     private void Start()
     {
         InputHandler.OnHit += CastHitRay;
         Cursor.lockState = CursorLockMode.Locked;
+        _raycastLayer = (1 << _raycastItemLayerIndex) | (1 << _raycastCarLayerIndex);
     }
 
     private void OnDisable()
@@ -36,14 +43,22 @@ public class CameraControl : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, _raycastDistance, _raycastLayer))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
+            GameObject hitObject = hit.collider.gameObject;
+
+            if (hitObject.GetComponentInChildren<Cargo>() != null)
+            {
+                OnRaycastHitCar?.Invoke();
+
+                return;
+            }
+
+            OnRaycastHitItem?.Invoke(hitObject);
+
+            return;
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
             Debug.Log("Did not Hit");
         }
     }
-
 }

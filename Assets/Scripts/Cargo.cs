@@ -4,20 +4,22 @@ public class Cargo : MonoBehaviour
 {
     [SerializeField] private Transform[] _itemSpots;
 
-    private GameObject[] _items;
-
     private void Start()
     {
-        _items = new GameObject[_itemSpots.Length];
+        HandsControl.OnReadyToGiveItem += TryPlaceItem;
+    }
+
+    private void OnDisable()
+    {
+        HandsControl.OnReadyToGiveItem -= TryPlaceItem;
     }
 
     public void TryPlaceItem(GameObject item)
     {
-        for (int i = 0; i < _items.Length; i++)
+        for (int i = 0; i < _itemSpots.Length; i++)
         {
-            if (_items[i] != null)
+            if (_itemSpots[i].childCount == 0)
             {
-                _items[i] = item;
                 item.transform.parent = _itemSpots[i];
                 item.transform.localPosition = Vector3.zero;
 

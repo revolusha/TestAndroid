@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6540536395957910692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2537330438002053906}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (5)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2174042861901686058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -185,6 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8594385208989161622}
+  - component: {fileID: 4475743788644108220}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -210,6 +211,27 @@ Transform:
   - {fileID: 1105918378796817828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4475743788644108220
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890188133749836386}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.52, y: 2, z: 5.24}
+  m_Center: {x: 0, y: 1.26, z: 0}
 --- !u!1 &4262996888244546743
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8227242840346062065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (8)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -250,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5543669453179509845}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (7)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -281,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5406681301918697509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (6)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -313,7 +335,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1105918378796817828}
   - component: {fileID: 253339375662691267}
-  m_Layer: 0
+  - component: {fileID: 7888712482661070644}
+  m_Layer: 7
   m_Name: Cargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,6 +389,27 @@ MonoBehaviour:
   - {fileID: 5406681301918697509}
   - {fileID: 5543669453179509845}
   - {fileID: 8227242840346062065}
+--- !u!65 &7888712482661070644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831075304057609357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.15, y: 1.18, z: 2.87}
+  m_Center: {x: 0, y: 0, z: 0.54}
 --- !u!1 &6110520742406878364
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4013551683335455991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (4)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -489,7 +533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7871944316675192342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -520,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2577429668442419088}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item Spot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}

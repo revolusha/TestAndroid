@@ -9,7 +9,5 @@ public class InputHandler : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) OnHit?.Invoke();
-
-
     }
 }
